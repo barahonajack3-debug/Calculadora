@@ -4,6 +4,7 @@
  */
 package vistaCalculadora;
 
+import controladorcalculadora.ControladorCalculadora;
 import javax.swing.JButton;
 import javax.swing.JLabel;
 
@@ -85,7 +86,8 @@ public class FrmCalculadora extends javax.swing.JFrame {
      * Creates new form FrmCalculadora
      */
     public FrmCalculadora() {
-        initComponents();
+        initComponents(); 
+        controlador = new ControladorCalculadora(this);
     }
 
     /**
@@ -288,82 +290,102 @@ public class FrmCalculadora extends javax.swing.JFrame {
 
     private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("1");
     }//GEN-LAST:event_btn1ActionPerformed
 
     private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("2");
     }//GEN-LAST:event_btn2ActionPerformed
 
     private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("3");
     }//GEN-LAST:event_btn3ActionPerformed
 
     private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("4");
     }//GEN-LAST:event_btn4ActionPerformed
 
     private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("5");
     }//GEN-LAST:event_btn5ActionPerformed
 
     private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("6");
     }//GEN-LAST:event_btn6ActionPerformed
 
     private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("7");
     }//GEN-LAST:event_btn7ActionPerformed
 
     private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("8");
     }//GEN-LAST:event_btn8ActionPerformed
 
     private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("9");
     }//GEN-LAST:event_btn9ActionPerformed
 
     private void btnCeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCeroActionPerformed
         // TODO add your handling code here:
+        controlador.agregarDigito("0");
     }//GEN-LAST:event_btnCeroActionPerformed
 
     private void btnCambiarSignoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarSignoActionPerformed
         // TODO add your handling code here:
+        controlador.cambiarSigno();
     }//GEN-LAST:event_btnCambiarSignoActionPerformed
 
     private void btnPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuntoActionPerformed
         // TODO add your handling code here:
+        controlador.agregarPunto();
     }//GEN-LAST:event_btnPuntoActionPerformed
 
     private void btnACActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnACActionPerformed
         // TODO add your handling code here:
+        controlador.limpiarTodo();
     }//GEN-LAST:event_btnACActionPerformed
 
     private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
         // TODO add your handling code here:
+        controlador.limpiarEntrada();
     }//GEN-LAST:event_btnCEActionPerformed
 
     private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
         // TODO add your handling code here:
+        controlador.borrarUltimo();
     }//GEN-LAST:event_btnBorrarActionPerformed
 
     private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
         // TODO add your handling code here:
+        controlador.calcularIgual();
     }//GEN-LAST:event_btnIgualActionPerformed
 
     private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
         // TODO add your handling code here:
+        controlador.operador("/");
     }//GEN-LAST:event_btnDivisionActionPerformed
 
     private void btnRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarActionPerformed
         // TODO add your handling code here:
+        controlador.cambiarSigno();
     }//GEN-LAST:event_btnRestarActionPerformed
 
     private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
         // TODO add your handling code here:
+        controlador.operador("+");
     }//GEN-LAST:event_btnSumarActionPerformed
 
     private void btnMulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMulActionPerformed
         // TODO add your handling code here:
+        controlador.operador("x");
     }//GEN-LAST:event_btnMulActionPerformed
 
     /**
