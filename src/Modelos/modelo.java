@@ -4,6 +4,9 @@
  */
 package Modelos;
 
+import excepciones.manejoExcepciones.DivisionPorCeroException;
+import excepciones.manejoExcepciones.ValorInvalidoException;
+
 /**
  *
  * @author Usuario
