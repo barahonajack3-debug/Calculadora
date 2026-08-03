@@ -80,7 +80,7 @@ public class FrmCalculadora extends javax.swing.JFrame {
     }
     public JLabel getLblPantalla() {
         return lblPantalla;
-    }
+    }   
     /**
      * Creates new form FrmCalculadora
      */
@@ -130,89 +130,109 @@ public class FrmCalculadora extends javax.swing.JFrame {
         btnAC.setBackground(new java.awt.Color(255, 51, 51));
         btnAC.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnAC.setText("AC");
+        btnAC.addActionListener(this::btnACActionPerformed);
         jPanel1.add(btnAC);
 
         btnCE.setBackground(new java.awt.Color(255, 153, 51));
         btnCE.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnCE.setText("CE");
+        btnCE.addActionListener(this::btnCEActionPerformed);
         jPanel1.add(btnCE);
 
         btnBorrar.setBackground(new java.awt.Color(255, 153, 51));
         btnBorrar.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnBorrar.setText("<");
+        btnBorrar.addActionListener(this::btnBorrarActionPerformed);
         jPanel1.add(btnBorrar);
 
         btnIgual.setBackground(new java.awt.Color(51, 153, 255));
         btnIgual.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnIgual.setText("=");
+        btnIgual.addActionListener(this::btnIgualActionPerformed);
         jPanel1.add(btnIgual);
 
         btn7.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn7.setText("7");
+        btn7.addActionListener(this::btn7ActionPerformed);
         jPanel1.add(btn7);
 
         btn8.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn8.setText("8");
+        btn8.addActionListener(this::btn8ActionPerformed);
         jPanel1.add(btn8);
 
         btn9.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn9.setText("9");
+        btn9.addActionListener(this::btn9ActionPerformed);
         jPanel1.add(btn9);
 
         btnDivision.setBackground(new java.awt.Color(51, 204, 255));
         btnDivision.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnDivision.setText("/");
+        btnDivision.addActionListener(this::btnDivisionActionPerformed);
         jPanel1.add(btnDivision);
 
         btn4.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn4.setText("4");
+        btn4.addActionListener(this::btn4ActionPerformed);
         jPanel1.add(btn4);
 
         btn5.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn5.setText("5");
+        btn5.addActionListener(this::btn5ActionPerformed);
         jPanel1.add(btn5);
 
         btn6.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn6.setText("6");
+        btn6.addActionListener(this::btn6ActionPerformed);
         jPanel1.add(btn6);
 
         btnRestar.setBackground(new java.awt.Color(51, 204, 255));
         btnRestar.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnRestar.setText("-");
+        btnRestar.addActionListener(this::btnRestarActionPerformed);
         jPanel1.add(btnRestar);
 
         btn1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn1.setText("1");
+        btn1.addActionListener(this::btn1ActionPerformed);
         jPanel1.add(btn1);
 
         btn2.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn2.setText("2");
+        btn2.addActionListener(this::btn2ActionPerformed);
         jPanel1.add(btn2);
 
         btn3.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn3.setText("3");
+        btn3.addActionListener(this::btn3ActionPerformed);
         jPanel1.add(btn3);
 
         btnSumar.setBackground(new java.awt.Color(51, 204, 255));
         btnSumar.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnSumar.setText("+");
+        btnSumar.addActionListener(this::btnSumarActionPerformed);
         jPanel1.add(btnSumar);
 
         btnCambiarSigno.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnCambiarSigno.setText("+/-");
+        btnCambiarSigno.addActionListener(this::btnCambiarSignoActionPerformed);
         jPanel1.add(btnCambiarSigno);
 
         btnCero.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnCero.setText("0");
+        btnCero.addActionListener(this::btnCeroActionPerformed);
         jPanel1.add(btnCero);
 
         btnPunto.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnPunto.setText(".");
+        btnPunto.addActionListener(this::btnPuntoActionPerformed);
         jPanel1.add(btnPunto);
 
         btnMul.setBackground(new java.awt.Color(51, 204, 255));
         btnMul.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btnMul.setText("x");
+        btnMul.addActionListener(this::btnMulActionPerformed);
         jPanel1.add(btnMul);
 
         jPanel2.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
@@ -228,19 +248,18 @@ public class FrmCalculadora extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblPantalla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblOperacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(lblOperacion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
+            .addComponent(lblPantalla, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(lblOperacion, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(lblPantalla, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(14, Short.MAX_VALUE))
+                .addContainerGap(8, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -266,6 +285,86 @@ public class FrmCalculadora extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn1ActionPerformed
+
+    private void btn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn2ActionPerformed
+
+    private void btn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn3ActionPerformed
+
+    private void btn4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn4ActionPerformed
+
+    private void btn5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn5ActionPerformed
+
+    private void btn6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn6ActionPerformed
+
+    private void btn7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn7ActionPerformed
+
+    private void btn8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn8ActionPerformed
+
+    private void btn9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btn9ActionPerformed
+
+    private void btnCeroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCeroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCeroActionPerformed
+
+    private void btnCambiarSignoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCambiarSignoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCambiarSignoActionPerformed
+
+    private void btnPuntoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPuntoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPuntoActionPerformed
+
+    private void btnACActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnACActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnACActionPerformed
+
+    private void btnCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCEActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnCEActionPerformed
+
+    private void btnBorrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBorrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnBorrarActionPerformed
+
+    private void btnIgualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIgualActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnIgualActionPerformed
+
+    private void btnDivisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnDivisionActionPerformed
+
+    private void btnRestarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRestarActionPerformed
+
+    private void btnSumarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSumarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnSumarActionPerformed
+
+    private void btnMulActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMulActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnMulActionPerformed
 
     /**
      * @param args the command line arguments
