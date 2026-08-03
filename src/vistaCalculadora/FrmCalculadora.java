@@ -4,6 +4,9 @@
  */
 package vistaCalculadora;
 
+import javax.swing.JButton;
+import javax.swing.JLabel;
+
 /**
  *
  * @author USER
@@ -12,6 +15,72 @@ public class FrmCalculadora extends javax.swing.JFrame {
     
     private static final java.util.logging.Logger logger = java.util.logging.Logger.getLogger(FrmCalculadora.class.getName());
 
+    public JButton getBtn1() {
+        return btn1;
+    }
+    public JButton getBtn2() {
+        return btn2;
+    }
+    public JButton getBtn3() {
+        return btn3;
+    }
+    public JButton getBtn4() {
+        return btn4;
+    }
+    public JButton getBtn5() {
+        return btn5;
+    }
+    public JButton getBtn6() {
+        return btn6;
+    }
+    public JButton getBtn7() {
+        return btn7;
+    }
+    public JButton getBtn8() {
+        return btn8;
+    }
+    public JButton getBtn9() {
+        return btn9;
+    }
+    public JButton getBtnAC() {
+        return btnAC;
+    }
+    public JButton getBtnBorrar() {
+        return btnBorrar;
+    }
+    public JButton getBtnCE() {
+        return btnCE;
+    }
+    public JButton getBtnCambiarSigno() {
+        return btnCambiarSigno;
+    }
+    public JButton getBtnCero() {
+        return btnCero;
+    }
+    public JButton getBtnDivision() {
+        return btnDivision;
+    }
+    public JButton getBtnIgual() {
+        return btnIgual;
+    }
+    public JButton getBtnMul() {
+        return btnMul;
+    }
+    public JButton getBtnPunto() {
+        return btnPunto;
+    }
+    public JButton getBtnRestar() {
+        return btnRestar;
+    }
+    public JButton getBtnSumar() {
+        return btnSumar;
+    }
+    public JLabel getLblOperacion() {
+        return lblOperacion;
+    }
+    public JLabel getLblPantalla() {
+        return lblPantalla;
+    }
     /**
      * Creates new form FrmCalculadora
      */
@@ -114,7 +183,6 @@ public class FrmCalculadora extends javax.swing.JFrame {
 
         btn1.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
         btn1.setText("1");
-        btn1.addActionListener(this::btn1ActionPerformed);
         jPanel1.add(btn1);
 
         btn2.setFont(new java.awt.Font("Segoe UI", 0, 48)); // NOI18N
@@ -198,10 +266,6 @@ public class FrmCalculadora extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btn1ActionPerformed
 
     /**
      * @param args the command line arguments
